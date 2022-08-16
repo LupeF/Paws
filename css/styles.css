@@ -1,0 +1,189 @@
+body {
+  background-color: gainsboro;
+  font-family: "Antic Slab", serif;
+  width: 90%;
+  margin: 3em auto;
+}
+
+main section {
+  margin: 7em 0 2em;
+}
+main section .flex-img {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main h1 {
+  text-align: center;
+}
+main .flex-links {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.5em;
+  padding-bottom: 3.5em;
+  border-bottom: 2px solid #8b8a8a;
+}
+main .link-container {
+  background-color: pink;
+  color: white;
+  height: 40px;
+  width: 150px;
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+main .link-container a {
+  text-decoration: none;
+  color: white;
+}
+main .maps img {
+  width: 100%;
+}
+main input {
+  width: 100%;
+  height: 3em;
+  padding: 1em;
+  margin-top: 1.5em;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 5px 5px 5px gray;
+}
+main .maps-styles {
+  margin-top: 8em;
+  border-bottom: 3px solid #8b8a8a;
+}
+main .maps-styles p {
+  text-align: center;
+  padding: 3px 0 4em;
+}
+main .maps-styles .search-input-container {
+  width: 80%;
+  margin: 5px auto;
+}
+main .maps-styles .search-input-container .location-marker-input {
+  position: relative;
+}
+main .maps-styles .search-input-container .location-marker-input img {
+  height: 1.5em;
+  position: absolute;
+  right: 1em;
+  top: 1.7em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #8b8a8a;
+}
+nav img {
+  padding: 0 0.5em;
+}
+nav div, nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+nav div li, nav ul li {
+  margin: 0 1em;
+}
+nav button {
+  width: 80px;
+  padding: 8px;
+  margin: 0 0.5em;
+  border-radius: 20px;
+  background-color: lightpink;
+  color: white;
+  border: none;
+}
+nav ul, nav button {
+  display: none;
+}
+nav .nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+nav .mobile-nav {
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: black;
+}
+nav .mobile-nav::before {
+  content: "";
+  background-color: black;
+  width: 20px;
+  height: 5px;
+  transform: translateY(-10px);
+  border-radius: 5px;
+}
+nav .mobile-nav::after {
+  content: "";
+  background-color: black;
+  width: 20px;
+  height: 5px;
+  transform: translateY(10px);
+  border-radius: 5px;
+}
+
+form {
+  margin: 5em auto;
+}
+form fieldset {
+  border: none;
+  text-align: center;
+}
+form fieldset legend {
+  font-size: xx-large;
+  margin-bottom: 3em;
+}
+form fieldset .input-flex {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+form fieldset .input-flex img {
+  position: absolute;
+  left: -2em;
+  bottom: 20em;
+  z-index: -1;
+}
+form fieldset .input-flex input {
+  height: 4em;
+}
+form fieldset .input-flex input, form fieldset .input-flex textarea {
+  width: 90%;
+  margin: 1em auto;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 5px 3px gray;
+}
+form fieldset button {
+  height: 40px;
+  width: 100px;
+  color: white;
+  background-color: pink;
+  border: none;
+  border-radius: 5px;
+  margin-left: 1.2em;
+}
+form .img-container {
+  position: absolute;
+  transform: translateY(-75px);
+  right: 1em;
+}
+
+/*# sourceMappingURL=styles.css.map */

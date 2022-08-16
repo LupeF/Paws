@@ -1,0 +1,48 @@
+form {
+    margin: 5em auto;
+    fieldset{
+        border: none;
+        text-align: center;
+        legend{
+            font-size: xx-large;
+            margin-bottom: 3em;
+        }
+        .input-flex{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            img{
+                position: absolute;
+                left: -2em;
+                bottom: 20em;
+                z-index: -1;
+            }
+            input {
+                height: 4em;
+                
+            }
+            input,textarea{
+                width: 90%;
+                margin: 1em auto;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                box-shadow: 5px 5px 3px gray;
+            }
+        }
+        button{
+            height: 40px;
+            width: 100px;
+            color: white;
+            background-color: pink;
+            border: none;
+            border-radius: 5px;
+            margin-left: 1.2em;
+        }
+    }
+    .img-container{
+       position: absolute;
+       transform: translateY(-75px);
+       right: 1em;
+    } 
+}
