@@ -5,6 +5,7 @@ nav{
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid rgb(139, 138, 138);
+    padding: 0 2em;
     img{
         padding: 0 .5em;
     }
@@ -33,28 +34,28 @@ nav{
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        position: relative;
     }
     .mobile-nav{
-        position: absolute;
         width: 20px;
         height: 5px;
         border-radius: 5px;
         background-color: black;
-        &::before{
-            content: '';
-            background-color: black;
-            width: 20px;
-            height: 5px;
-            transform: translateY(-10px);
-            border-radius: 5px;
-        }
+        cursor: pointer;
+        &::before,
         &::after{
             content: '';
+            position: absolute;
             background-color: black;
             width: 20px;
             height: 5px;
-            transform: translateY(10px);
             border-radius: 5px;
+        }
+        &::before{
+            transform: translateY(-10px);
+        }
+        &::after{
+            transform: translateY(10px);
         }
     }
 }
