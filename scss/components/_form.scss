@@ -1,48 +1,49 @@
 form {
     margin: 5em auto;
+    max-width: 600px;
     fieldset{
         border: none;
-        text-align: center;
         legend{
             font-size: xx-large;
-            margin-bottom: 3em;
+            margin: 2em auto;
         }
-        .input-flex{
-            display: flex;
-            flex-direction: column;
+        .input-container{
             position: relative;
-            img{
-                position: absolute;
-                left: -2em;
-                bottom: 20em;
-                z-index: -1;
-            }
+            width: 80%;
+            margin: 0 auto;
             input {
                 height: 4em;
-                
             }
             input,textarea{
-                width: 90%;
+                width: 100%;
                 margin: 1em auto;
                 outline: none;
                 border: none;
                 border-radius: 5px;
                 box-shadow: 5px 5px 3px gray;
             }
-        }
-        button{
-            height: 40px;
-            width: 100px;
-            color: white;
-            background-color: pink;
-            border: none;
-            border-radius: 5px;
-            margin-left: 1.2em;
-        }
+            .cat-one{
+                position: absolute;
+                left: -3.7em;
+                bottom: 24.5em;
+                z-index: -1;
+                @media(min-width: 600px){
+                    left: -1;
+                }
+            }
+            .cat-two{
+                position: absolute;
+                bottom: 0;
+                right: -2em;
+             } 
+        }  
     }
-    .img-container{
-       position: absolute;
-       transform: translateY(-75px);
-       right: 1em;
+    button{
+        height: 40px;
+        width: 100px;
+        color: white;
+        background-color: pink;
+        border: none;
+        border-radius: 5px;
     } 
 }

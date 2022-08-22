@@ -1,5 +1,11 @@
-.maps img{
-    width: 100%;
+.maps{
+    img{
+        width: 100%;
+    }
+    @media(min-width: 768px){
+        width: 75%;
+        margin: auto;
+    }
 }
 input{
     width: 100%;
@@ -21,13 +27,16 @@ input{
     .search-input-container{
         width: 80%;
         margin: 5px auto;
+        @media(min-width:768px){
+            width: 65%;
+        }
         .location-marker-input{
             position:relative;
             img{
                 height: 1.5em;
                 position:absolute;
                 right: 1em;
-                top: 1.7em;
+                top: 10px;
             }
         }
     }

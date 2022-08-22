@@ -2,20 +2,39 @@ body{
     background-color: gainsboro;
     font-family: 'Antic Slab', serif;
     width: 90%;
-    margin: 3em auto;
+    margin: auto;
 }
 main{
     section{
+        margin: 7em 0 2em;
+        @media(min-width:768px){
+            max: width 693px; 
+        }
         .content-div{
             padding-top: 2em;
+            max-width: 700px;
+            margin: auto;
+            
         }
-        margin: 7em 0 2em;
+        .flex-container{
+            display: flex;
+            flex-direction: column;
+            @media(min-width:768px){
+                flex-direction: row;
+                .content-div{
+                    padding-left: 2.5em;
+                }
+            }
+        }
         .flex-img{
             margin-top: 3em;
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
+            @media(min-width:768px){
+                flex-direction: row;
+            }
             img{
                 margin-bottom: 1em;
             }
@@ -32,6 +51,10 @@ main{
         margin-top: 3.5em;
         padding-bottom: 3.5em;
         border-bottom: 2px solid rgb(139, 138, 138);
+        @media(min-width: 768px){
+            flex-direction: row;
+            margin-top: -5em;
+        }
     }
     .link-container{
         background-color: pink;
