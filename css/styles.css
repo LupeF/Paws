@@ -95,7 +95,7 @@ nav ul {
   flex-direction: column;
   background-color: bisque;
   transition: transform 0.5s ease-in-out;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   position: absolute;
   width: 100%;
 }

@@ -17,9 +17,10 @@ nav{
         flex-direction: column;
         background-color: bisque;
         transition: transform .5s ease-in-out;
-        transform: translateX(100%);
+        transform: translateX(-100%);
         position: absolute;
         width: 100%;
+        
         li{
             list-style-type: none;
             text-align: center;
@@ -28,6 +29,7 @@ nav{
     }
     .open{
         transform: translateX(0);
+    
     }
     
     button{
