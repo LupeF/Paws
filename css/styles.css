@@ -80,21 +80,32 @@ main .link-container a {
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
   border-bottom: 2px solid #8b8a8a;
-  padding: 0 2em;
 }
 nav img {
   padding: 0 0.5em;
 }
-nav div, nav ul {
+nav .logo-container {
   display: flex;
   align-items: center;
-  list-style-type: none;
 }
-nav div li, nav ul li {
-  margin: 0 1em;
+nav ul {
+  margin: 0;
+  padding-left: 0;
+  flex-direction: column;
+  background-color: bisque;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(100%);
+  position: absolute;
+  width: 100%;
+}
+nav ul li {
+  list-style-type: none;
+  text-align: center;
+  padding: 0.5em;
+}
+nav .open {
+  transform: translateX(0);
 }
 nav button {
   width: 60px;
@@ -106,16 +117,19 @@ nav button {
   border: none;
   display: none;
 }
-nav ul, nav button {
+nav button {
   display: none;
 }
 @media (min-width: 768px) {
-  nav ul, nav button {
+  nav button {
     display: flex;
   }
 }
 nav .hamburger-container {
-  position: relative;
+  position: absolute;
+  top: 2.2em;
+  left: 90%;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   nav .hamburger-container {
@@ -127,7 +141,6 @@ nav .hamburger-container .mobile-nav {
   height: 5px;
   border-radius: 5px;
   background-color: black;
-  cursor: pointer;
 }
 nav .hamburger-container .mobile-nav::before, nav .hamburger-container .mobile-nav::after {
   content: "";

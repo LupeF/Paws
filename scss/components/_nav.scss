@@ -1,21 +1,35 @@
 nav{
-    display: flex;
-    justify-content: space-between;
-    
+    // display: flex;
+    // justify-content: space-between;
+    // flex-direction: column;
     border-bottom: 2px solid rgb(139, 138, 138);
-    padding: 0 2em;
+    // padding: 0 2em;
     img{
         padding: 0 .5em;
     }
-    div, ul{ 
+    .logo-container{ 
         display: flex;
-        align-items: center;
-        list-style-type: none;
+        align-items: center;   
+    }
+    ul{
+        margin: 0;
+        padding-left: 0;
+        flex-direction: column;
+        background-color: bisque;
+        transition: transform .5s ease-in-out;
+        transform: translateX(100%);
+        position: absolute;
+        width: 100%;
         li{
-            margin: 0 1em;
+            list-style-type: none;
+            text-align: center;
+            padding: .5em; 
         }
     }
-   
+    .open{
+        transform: translateX(0);
+    }
+    
     button{
         width: 60px;
         padding: 8px;
@@ -26,15 +40,18 @@ nav{
         border: none;
         display: none;
     }
-    ul,button{
+    
+    button{
         display: none;
         @media(min-width: 768px){
             display: flex;
         }
     }
     .hamburger-container{
-        position: relative;
-        
+        position: absolute;
+        top: 2.2em;
+        left: 90%;
+        cursor: pointer;
         @media(min-width: 768px){
             display: none;
         }
@@ -43,7 +60,6 @@ nav{
             height: 5px;
             border-radius: 5px;
             background-color: black;
-            cursor: pointer;
             &::before,
             &::after{
                 content: '';
@@ -86,7 +102,6 @@ nav{
                     border-bottom: none;
                 }
             }
-            
         }
     }
 }
