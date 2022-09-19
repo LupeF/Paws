@@ -1,9 +1,10 @@
 nav{
-    // display: flex;
-    // justify-content: space-between;
-    // flex-direction: column;
     border-bottom: 2px solid rgb(139, 138, 138);
-    // padding: 0 2em;
+    @media(min-width:768px){
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2em;
+    }
     img{
         padding: 0 .5em;
     }
@@ -11,39 +12,48 @@ nav{
         display: flex;
         align-items: center;   
     }
+    .flex{
+        @media(min-width: 768px){
+            display: flex;
+            align-items: center;
+        }
+    }
     ul{
         margin: 0;
         padding-left: 0;
-        flex-direction: column;
         background-color: bisque;
         transition: transform .5s ease-in-out;
         transform: translateX(-100%);
         position: absolute;
         width: 100%;
-        
+        @media(min-width:768px){
+            position: initial;
+            transform: none;
+            transition: none;
+            display: flex;
+            flex-direction: row;
+            background-color: initial;
+        }
         li{
             list-style-type: none;
             text-align: center;
-            padding: .5em; 
+            padding: .5em;
+            a{
+                text-decoration: none;
+                color: initial;
+            } 
         }
     }
     .open{
         transform: translateX(0);
-    
     }
-    
     button{
-        width: 60px;
         padding: 8px;
         margin: 0 .5em;
         border-radius: 20px;
         background-color: lightpink;
         color: white;
         border: none;
-        display: none;
-    }
-    
-    button{
         display: none;
         @media(min-width: 768px){
             display: flex;
@@ -76,33 +86,6 @@ nav{
             }
             &::after{
                 transform: translateY(10px);
-            }
-        }
-        .menu-styles{
-            width: 400px;
-            height: 350px;
-            background-color: rosybrown;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-            grid-template-rows: repeat(4, 1fr);
-            justify-content: space-evenly;
-            text-align: center;
-            transform: translateX(100%);
-            .transition{
-                transition: transform 2s ease-in;
-                transform:translateX(0);
-            }           
-            a{
-                text-decoration: none;
-                color: white;
-                border-bottom: 2px solid black;
-                width: 100%;
-                margin-top: 2em;
-                padding-bottom: 2em;
-                &:last-child{
-                    border-bottom: none;
-                }
             }
         }
     }

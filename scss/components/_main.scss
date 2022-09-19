@@ -1,27 +1,33 @@
 body{
     background-color: gainsboro;
     font-family: 'Antic Slab', serif;
-    // width: 90%;
     margin: 0;
 }
 main{
+    padding: 0 1em;
+    max-width: 1000px;
+    margin: 0 auto;
     section{
         margin: 7em 0 2em;
         @media(min-width:768px){
-            max: width 693px; 
         }
         .content-div{
-            padding-top: 2em;
-            max-width: 700px;
             margin: auto;
-            
+            > h1{
+                @media(min-width:768px){
+                    text-align: initial;
+                }
+            }
         }
         .flex-container{
             display: flex;
             flex-direction: column;
+            img{
+                height: 200px;
+            }
             @media(min-width:768px){
                 flex-direction: row;
-                margin: 0 7em;
+                align-items: center;
                 .content-div{
                     padding-left: 2.5em;
                 }

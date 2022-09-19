@@ -4,27 +4,33 @@ body {
   margin: 0;
 }
 
+main {
+  padding: 0 1em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 main section {
   margin: 7em 0 2em;
 }
-@media (min-width: 768px) {
-  main section {
-    max: width 693px;
-  }
-}
 main section .content-div {
-  padding-top: 2em;
-  max-width: 700px;
   margin: auto;
+}
+@media (min-width: 768px) {
+  main section .content-div > h1 {
+    text-align: initial;
+  }
 }
 main section .flex-container {
   display: flex;
   flex-direction: column;
 }
+main section .flex-container img {
+  height: 200px;
+}
 @media (min-width: 768px) {
   main section .flex-container {
     flex-direction: row;
-    margin: 0 7em;
+    align-items: center;
   }
   main section .flex-container .content-div {
     padding-left: 2.5em;
@@ -82,6 +88,13 @@ main .link-container a {
 nav {
   border-bottom: 2px solid #8b8a8a;
 }
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+  }
+}
 nav img {
   padding: 0 0.5em;
 }
@@ -89,35 +102,50 @@ nav .logo-container {
   display: flex;
   align-items: center;
 }
+@media (min-width: 768px) {
+  nav .flex {
+    display: flex;
+    align-items: center;
+  }
+}
 nav ul {
   margin: 0;
   padding-left: 0;
-  flex-direction: column;
   background-color: bisque;
   transition: transform 0.5s ease-in-out;
   transform: translateX(-100%);
   position: absolute;
   width: 100%;
 }
+@media (min-width: 768px) {
+  nav ul {
+    position: initial;
+    transform: none;
+    transition: none;
+    display: flex;
+    flex-direction: row;
+    background-color: initial;
+  }
+}
 nav ul li {
   list-style-type: none;
   text-align: center;
   padding: 0.5em;
 }
+nav ul li a {
+  text-decoration: none;
+  color: initial;
+}
 nav .open {
   transform: translateX(0);
 }
 nav button {
-  width: 60px;
   padding: 8px;
   margin: 0 0.5em;
   border-radius: 20px;
   background-color: lightpink;
   color: white;
   border: none;
-  display: none;
-}
-nav button {
   display: none;
 }
 @media (min-width: 768px) {
@@ -155,33 +183,6 @@ nav .hamburger-container .mobile-nav::before {
 }
 nav .hamburger-container .mobile-nav::after {
   transform: translateY(10px);
-}
-nav .hamburger-container .menu-styles {
-  width: 400px;
-  height: 350px;
-  background-color: rosybrown;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  grid-template-rows: repeat(4, 1fr);
-  justify-content: space-evenly;
-  text-align: center;
-  transform: translateX(100%);
-}
-nav .hamburger-container .menu-styles .transition {
-  transition: transform 2s ease-in;
-  transform: translateX(0);
-}
-nav .hamburger-container .menu-styles a {
-  text-decoration: none;
-  color: white;
-  border-bottom: 2px solid black;
-  width: 100%;
-  margin-top: 2em;
-  padding-bottom: 2em;
-}
-nav .hamburger-container .menu-styles a:last-child {
-  border-bottom: none;
 }
 
 .maps img {
