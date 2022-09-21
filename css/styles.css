@@ -40,7 +40,6 @@ main section .flex-container img {
 main section .flex-img {
   margin-top: 3em;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
@@ -118,6 +117,7 @@ nav ul {
   transform: translateX(-100%);
   position: absolute;
   width: 100%;
+  opacity: 0;
 }
 @media (min-width: 768px) {
   nav ul {
@@ -127,6 +127,7 @@ nav ul {
     display: flex;
     flex-direction: row;
     background-color: initial;
+    opacity: 1;
   }
 }
 nav ul li {
@@ -140,6 +141,7 @@ nav ul li a {
 }
 nav .open {
   transform: translateX(0);
+  opacity: 1;
 }
 nav button {
   padding: 8px;

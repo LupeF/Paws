@@ -26,6 +26,7 @@ nav{
         transform: translateX(-100%);
         position: absolute;
         width: 100%;
+        opacity:0;
         @media(min-width:768px){
             position: initial;
             transform: none;
@@ -33,6 +34,7 @@ nav{
             display: flex;
             flex-direction: row;
             background-color: initial;
+            opacity: 1;
         }
         li{
             list-style-type: none;
@@ -46,6 +48,7 @@ nav{
     }
     .open{
         transform: translateX(0);
+        opacity: 1;
     }
     button{
         padding: 8px;
