@@ -1,11 +1,12 @@
 body{
     background-color: gainsboro;
     font-family: 'Antic Slab', serif;
+    font-size: larger;
     margin: 0;
 }
 main{
     padding: 0 1em;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     section{
         margin: 7em 0 2em;
@@ -41,6 +42,7 @@ main{
             align-items: center;
             @media(min-width:768px){
                 flex-direction: row;
+                justify-content: space-evenly;
             }
             img{
                 margin-bottom: 1em;
@@ -66,7 +68,7 @@ main{
     .link-container{
         background-color: pink;
         color: white;
-        height: 40px;
+        height: 60px;
         width: 150px;
         margin: 1em;
         display: flex;
